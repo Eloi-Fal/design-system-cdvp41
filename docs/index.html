@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Papier, marine et rouge soleil — CDVP41</title>
+<meta name="description" content="Aperçu du design system CDVP41 : les pages du Programme Handi-Planeur 2027 rendues avec les jetons, puis la palette et l'échelle.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700;800&family=Barlow+Condensed:wght@700&display=swap">
+<style>
+:root{
+  --font-sans:'Barlow',Helvetica,Arial,sans-serif;
+  --font-condensed:'Barlow Condensed','Barlow',sans-serif;
+  --navy-900:#1A2440;--navy-700:#1D3A6E;--navy-600:#2C3752;--navy-500:#44506B;--navy-400:#6A7389;--navy-100:#D6DEEE;
+  --red-600:#D9302A;--red-300:#FF8F88;--red-200:#FFB3AE;
+  --paper:#FDFCFA;--mist:#F1F3F7;--line:#D7D9DF;--desk:#E9E7E2;--white:#FFFFFF;
+  --text-strong:var(--navy-900);--text-heading:var(--navy-700);--text-body:var(--navy-600);--text-muted:var(--navy-500);--text-subtle:var(--navy-400);
+  --text-on-dark:var(--white);--text-on-dark-muted:var(--navy-100);--accent:var(--red-600);--accent-on-dark:var(--red-300);--eyebrow-on-dark:var(--red-200);
+  --surface-page:var(--paper);--surface-card:var(--mist);--surface-dark:var(--navy-700);--surface-desk:var(--desk);--border-default:var(--line);--border-strong:var(--navy-700);
+  --space-1:3px;--space-2:6px;--space-3:10px;--space-4:12px;--space-5:14px;--space-6:18px;--space-7:26px;--space-8:34px;--space-9:38px;--space-10:44px;
+  --page-pad-x:38px;--page-pad-top:34px;--page-pad-bottom:26px;
+  --radius-sm:6px;--radius-md:8px;--radius-full:999px;
+  --shadow-sheet:0 1px 2px rgba(26,36,64,.08),0 8px 24px rgba(26,36,64,.08);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--surface-desk);color:var(--text-body);font-family:var(--font-sans);font-size:13px;line-height:1.45;-webkit-font-smoothing:antialiased}
+h1,h2,h3,p{margin:0}
+.eyebrow{font-family:var(--font-condensed);font-weight:700;font-size:12px;line-height:1.2;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.eyebrow.titre{color:var(--text-heading)}
+.eyebrow.sombre{color:var(--eyebrow-on-dark);font-size:11px;letter-spacing:.16em}
+.h1{font-size:34px;line-height:1.02;font-weight:800;letter-spacing:-.01em;color:var(--text-heading);text-wrap:balance}
+.display{font-size:58px;line-height:.95;font-weight:800;letter-spacing:-.02em;color:var(--text-heading)}
+.lead{font-size:14px;line-height:1.5;color:var(--text-body)}
+.small{font-size:11.5px;line-height:1.35;color:var(--text-muted)}
+
+.head{max-width:1240px;margin:0 auto;padding:40px 24px 8px;display:flex;flex-wrap:wrap;gap:12px 32px;align-items:baseline;justify-content:space-between}
+.head b{font-weight:800;font-size:17px;letter-spacing:-.02em;color:var(--text-heading)}
+.head nav{display:flex;gap:18px}
+.head a{color:var(--text-muted);text-decoration:none;font-family:var(--font-condensed);font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid transparent;padding-bottom:2px}
+.head a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+.head a:focus-visible{outline:3px solid var(--red-600);outline-offset:2px}
+.sheets{display:flex;flex-wrap:wrap;justify-content:center;gap:32px;padding:32px 24px 56px}
+.cd-page{position:relative;display:flex;flex-direction:column;width:559px;height:794px;overflow:hidden;background:var(--surface-page);color:var(--text-strong);padding:var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);box-shadow:var(--shadow-sheet);flex:0 0 auto}
+.cd-page-corps{display:flex;flex:1 1 auto;flex-direction:column;gap:var(--space-6)}
+.cd-page-couverture{padding:0}
+.cd-page-couverture .cd-page-corps{gap:0}
+.cd-page-barre{flex:0 0 auto;height:10px;background:var(--red-600)}
+@media (max-width:620px){.cd-page{width:100%;height:auto}}
+
+.cd-encart{display:flex;align-items:center;gap:16px;padding:16px 20px;border-radius:var(--radius-md);background:var(--surface-dark);color:var(--text-on-dark)}
+.cd-encart-chiffre{flex:0 0 auto;font-size:44px;line-height:1;font-weight:800;color:var(--accent-on-dark)}
+.cd-encart-texte{font-size:13.5px;line-height:1.4;text-wrap:pretty}
+.cd-chiffres{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:3px solid var(--border-strong);border-bottom:1px solid var(--border-default)}
+.cd-chiffre{display:flex;flex-direction:column;gap:4px;padding:var(--space-5) 10px}
+.cd-chiffre:first-child{padding-left:0}.cd-chiffre:last-child{padding-right:0}
+.cd-chiffre+.cd-chiffre{border-left:1px solid var(--border-default)}
+.cd-chiffre-valeur{font-size:38px;line-height:1;font-weight:800;letter-spacing:-.02em;color:var(--accent);white-space:nowrap}
+.cd-chiffre-libelle{font-size:13px;font-weight:700;color:var(--text-heading)}
+.cd-chiffre-note{font-size:11.5px;line-height:1.35;color:var(--text-muted)}
+.cd-etape{display:grid;grid-template-columns:28px minmax(0,1fr);gap:var(--space-4);align-items:start}
+.cd-etape-encart{grid-template-columns:30px minmax(0,1fr);padding:var(--space-5) 16px;border-radius:var(--radius-md);background:var(--surface-card)}
+.cd-etape-num{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:var(--radius-full);color:var(--white);font-weight:800;font-size:14px;background:var(--red-600)}
+.cd-etape-encart .cd-etape-num{width:30px;height:30px;font-size:15px}
+.cd-etape-num-marine{background:var(--navy-700)}
+.cd-etape-corps{display:flex;flex-direction:column;gap:var(--space-1)}
+.cd-etape-titre{font-size:16px;line-height:1.2;font-weight:700;color:var(--text-heading)}
+.cd-etape-texte{font-size:13px;line-height:1.45;color:var(--text-body);text-wrap:pretty}
+.cd-tuiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding-top:var(--space-5);border-top:3px solid var(--border-strong)}
+.cd-tuile{display:flex;flex-direction:column;gap:2px;padding:var(--space-3) var(--space-4);border-radius:var(--radius-sm);background:var(--surface-card)}
+.cd-tuile-titre{font-size:13.5px;font-weight:700;color:var(--text-heading)}
+.cd-tuile-texte{font-size:11.5px;line-height:1.35;color:var(--text-muted)}
+.cd-encadre{display:flex;align-items:center;gap:var(--space-4);padding:10px 16px;border:2px solid var(--border-strong);border-radius:var(--radius-md)}
+.cd-encadre-signe{flex:0 0 auto;font-size:26px;line-height:1;font-weight:800;color:var(--accent)}
+.cd-encadre-texte{font-size:13.5px;line-height:1.4;color:var(--text-strong);text-wrap:pretty}
+.cd-encadre-texte strong{color:var(--text-heading)}
+.cd-bandeau{display:flex;align-items:stretch;overflow:hidden;border-radius:var(--radius-md);background:var(--surface-dark);color:var(--text-on-dark)}
+.cd-bandeau-logo{display:flex;flex:0 0 auto;align-items:center;justify-content:center;padding:var(--space-2) 8px;background:var(--white)}
+.cd-bandeau-logo img{display:block;width:82px;height:82px;object-fit:contain}
+.cd-bandeau-texte{display:flex;flex-direction:column;justify-content:center;gap:4px;padding:var(--space-4) var(--space-6)}
+.cd-bandeau-titre{font-size:18px;line-height:1.2;font-weight:700;text-wrap:pretty}
+.cd-bandeau-sous{font-size:13.5px;line-height:1.35;color:var(--text-on-dark-muted)}
+.cd-bandeau-page{align-items:center;gap:16px;padding:14px var(--space-10);border-radius:0;margin-top:auto}
+.cd-bandeau-page .cd-bandeau-logo{padding:4px;border-radius:var(--radius-sm)}
+.cd-bandeau-page .cd-bandeau-logo img{width:58px;height:58px}
+.cd-bandeau-page .cd-bandeau-texte{padding:0}
+.cd-pied{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:10px;border-top:1px solid var(--border-default);font-size:10.5px;color:var(--text-subtle)}
+.cd-pied-num{font-size:12px;font-weight:700;color:var(--text-heading)}
+.titre-logo{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.titre-logo img{width:78px;height:78px;flex:0 0 auto}
+
+.couv{padding:var(--space-8) var(--space-10) 0;display:flex;flex-direction:column;flex:1 1 auto}
+.couv-ligne{display:flex;justify-content:space-between}
+.couv-logo{display:block;width:340px;height:340px;margin:22px auto 0;object-fit:contain}
+.couv-filet{width:56px;height:4px;background:var(--red-600);margin-top:var(--space-5)}
+
+.fiche{max-width:1240px;margin:0 auto;padding:0 24px 72px}
+.bloc{background:var(--surface-page);border-radius:var(--radius-md);padding:26px 28px;margin-bottom:18px;box-shadow:var(--shadow-sheet)}
+.bloc h2{font-size:18px;font-weight:700;color:var(--text-heading);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.sw{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:0;padding:0;list-style:none}
+.sw li{display:flex;flex-direction:column;gap:2px;padding:8px 10px 9px;border:1px solid var(--line);border-radius:var(--radius-sm)}
+.sw i{display:block;height:28px;border-radius:3px;border:1px solid rgba(26,36,64,.14);margin-bottom:6px}
+.sw b{font-size:12px;font-weight:700;color:var(--text-heading)}
+.sw span{font-size:11.5px;color:var(--text-muted)}
+.type{display:grid;grid-template-columns:190px 1fr;gap:16px;padding:12px 0;border-top:1px solid var(--line);align-items:baseline}
+.type dt{font-size:11.5px;color:var(--text-muted);line-height:1.4}
+.type dd{margin:0;color:var(--text-heading)}
+@media (max-width:640px){.type{grid-template-columns:1fr;gap:4px}}
+.foot{max-width:70ch;margin:0 auto;padding:0 24px 56px;font-size:12px;color:var(--text-subtle)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+@media print{body{background:#fff}.cd-page{box-shadow:none;width:148mm;height:210mm}.head,.fiche,.foot{display:none}}
+</style>
+</head>
+<body>
+
+<header class="head">
+  <div><b>CDVP41</b> <span class="small">· Papier, marine et rouge soleil</span></div>
+  <nav aria-label="Sommaire"><a href="#pages">Les pages</a><a href="#palette">Palette</a><a href="#typo">Typographie</a><a href="https://github.com/Eloi-Fal/design-system-cdvp41">GitHub</a></nav>
+</header>
+
+<main>
+<section class="sheets" id="pages" aria-label="Trois pages du Programme Handi-Planeur 2027">
+
+  <article class="cd-page cd-page-couverture" aria-label="Couverture">
+    <div class="cd-page-barre"></div>
+    <div class="cd-page-corps couv">
+      <div class="couv-ligne"><span class="eyebrow titre">Loir-et-Cher</span><span class="eyebrow">Saison 2027</span></div>
+      <img class="couv-logo" src="./assets/cdvp41-logo-h.png" alt="CDVP41 Section Handi-Planeur Loir-et-Cher">
+      <p class="eyebrow" style="margin-top:28px">Programme départemental</p>
+      <h1 class="display" style="margin-top:6px">Handi-Planeur<br>2027</h1>
+      <div class="couv-filet" aria-hidden="true"></div>
+      <p class="lead" style="margin-top:14px;font-size:16px;max-width:38ch">Rendre le vol à voile accessible aux personnes en situation de handicap, avec les clubs du département.</p>
+    </div>
+    <div class="cd-bandeau cd-bandeau-page">
+      <div class="cd-bandeau-logo"><img src="./assets/cdvp41-ans.png" alt="Agence nationale du Sport"></div>
+      <div class="cd-bandeau-texte"><div class="cd-bandeau-sous">Avec le soutien de</div><div class="cd-bandeau-titre">l'Agence nationale du Sport</div></div>
+    </div>
+  </article>
+
+  <article class="cd-page" aria-label="Page 3, Pourquoi ce programme">
+    <div class="cd-page-corps">
+      <div class="titre-logo">
+        <div><p class="eyebrow">Pourquoi ce programme</p><h2 class="h1" style="margin-top:6px">Ouvrir le ciel à celles et ceux qui en sont éloignés</h2></div>
+        <img src="./assets/cdvp41-logo-h.png" alt="">
+      </div>
+      <p class="lead">Un premier vol en planeur, c'est un moment que l'on n'oublie pas. Pour une personne en situation de handicap, c'est aussi la preuve que le ciel n'est pas réservé à quelques-uns. Nos clubs ont les machines, les pilotes et le savoir-faire : il ne manquait qu'un cadre commun et un coup de pouce financier.</p>
+      <div class="cd-encart"><div class="cd-encart-chiffre">19</div><div class="cd-encart-texte">personnes en situation de handicap ont déjà découvert le planeur avec APF France handicap et l'ADAPEI. La demande est là.</div></div>
+      <div class="cd-etape"><div class="cd-etape-num" aria-hidden="true">1</div><div class="cd-etape-corps"><div class="cd-etape-titre">Une dynamique qui prend</div><div class="cd-etape-texte">APF France handicap puis l'ADAPEI sont déjà venus voler. D'autres projets d'inclusion se préparent, notamment avec Les Colibris de Sologne.</div></div></div>
+      <div class="cd-etape"><div class="cd-etape-num" aria-hidden="true">2</div><div class="cd-etape-corps"><div class="cd-etape-titre">Un projet départemental, pas celui d'un seul club</div><div class="cd-etape-texte">Aucune exclusivité de site : le Comité coordonne, les clubs accueillent selon leurs moyens. On mutualise les bénévoles, le matériel et l'organisation.</div></div></div>
+      <div class="cd-etape"><div class="cd-etape-num" aria-hidden="true">3</div><div class="cd-etape-corps"><div class="cd-etape-titre">Le prix ne doit plus être un frein</div><div class="cd-etape-texte">Le coût reste souvent ce qui décourage les participants. L'aide réduit la facture de chaque vol, pour la personne comme pour son accompagnant.</div></div></div>
+      <div>
+        <p class="eyebrow titre" style="margin-bottom:10px">Le comité à vos côtés</p>
+        <div class="cd-tuiles">
+          <div class="cd-tuile"><div class="cd-tuile-titre">Aide financière</div><div class="cd-tuile-texte">Une partie des vols prise en charge</div></div>
+          <div class="cd-tuile"><div class="cd-tuile-titre">Main-d'œuvre</div><div class="cd-tuile-texte">Des bénévoles en renfort les jours d'accueil</div></div>
+          <div class="cd-tuile"><div class="cd-tuile-titre">Aide administrative</div><div class="cd-tuile-texte">Un appui pour vos dossiers, si besoin</div></div>
+        </div>
+      </div>
+    </div>
+    <footer class="cd-pied"><div>CDVP41 · Section Handi-Planeur Loir-et-Cher</div><div class="cd-pied-num">3</div></footer>
+  </article>
+
+  <article class="cd-page" aria-label="Page 4, Le programme 2027">
+    <div class="cd-page-corps">
+      <div><p class="eyebrow">Saison avril → septembre 2027</p><h2 class="h1" style="margin-top:6px">Le programme 2027</h2></div>
+      <div class="cd-bandeau"><div class="cd-bandeau-logo"><img src="./assets/cdvp41-ans.png" alt="Agence nationale du Sport"></div><div class="cd-bandeau-texte"><div class="eyebrow sombre">Financement acquis</div><div class="cd-bandeau-titre">Aide accordée par l'Agence nationale du Sport (ANS)</div></div></div>
+      <div class="cd-chiffres">
+        <div class="cd-chiffre"><div class="cd-chiffre-valeur">35 €</div><div class="cd-chiffre-libelle">par personne</div><div class="cd-chiffre-note">Participant comme accompagnant</div></div>
+        <div class="cd-chiffre"><div class="cd-chiffre-valeur">80</div><div class="cd-chiffre-libelle">personnes aidées</div><div class="cd-chiffre-note">Dont au moins 40 en situation de handicap</div></div>
+        <div class="cd-chiffre"><div class="cd-chiffre-valeur">2 800 €</div><div class="cd-chiffre-libelle">enveloppe globale</div><div class="cd-chiffre-note">Pour toute la saison</div></div>
+      </div>
+      <p class="eyebrow titre">Deux façons d'en profiter</p>
+      <div class="cd-etape cd-etape-encart" style="margin-top:-8px"><div class="cd-etape-num cd-etape-num-marine" aria-hidden="true">1</div><div class="cd-etape-corps"><div class="cd-etape-titre">Une aide aux vols toute la saison</div><div class="cd-etape-texte">35 € par personne, pour la personne en situation de handicap comme pour son accompagnant, quand votre club les accueille.</div></div></div>
+      <div class="cd-etape cd-etape-encart" style="margin-top:-8px"><div class="cd-etape-num" aria-hidden="true">2</div><div class="cd-etape-corps"><div class="cd-etape-titre">Des journées Handi-Planeur dédiées</div><div class="cd-etape-texte">Des temps forts à dates fixes, que nous construisons ensemble avec les clubs volontaires.</div></div></div>
+      <div class="cd-encadre"><div class="cd-encadre-signe" aria-hidden="true">+</div><div class="cd-encadre-texte"><strong>Cumulable</strong> avec le dispositif « Ça plane pour tous » et avec les autres aides que votre club peut demander à d'autres structures.</div></div>
+      <div style="margin-top:auto"><div style="font-size:17px;font-weight:700;color:var(--text-heading)">Votre club est partant ? Parlons-en.</div><div>cdvp41.bureau@gmail.com</div></div>
+    </div>
+    <footer class="cd-pied"><div>CDVP41 · Section Handi-Planeur Loir-et-Cher</div><div class="cd-pied-num">4</div></footer>
+  </article>
+</section>
+
+<section class="fiche">
+  <div class="bloc" id="palette">
+    <h2>Palette</h2>
+    <ul class="sw">
+      <li><i style="background:#1A2440"></i><b>navy-900</b><span>#1A2440 · texte fort</span></li>
+      <li><i style="background:#1D3A6E"></i><b>navy-700</b><span>#1D3A6E · la marque</span></li>
+      <li><i style="background:#2C3752"></i><b>navy-600</b><span>#2C3752 · texte courant</span></li>
+      <li><i style="background:#44506B"></i><b>navy-500</b><span>#44506B · texte secondaire</span></li>
+      <li><i style="background:#6A7389"></i><b>navy-400</b><span>#6A7389 · pied de page</span></li>
+      <li><i style="background:#D6DEEE"></i><b>navy-100</b><span>#D6DEEE · sur fond sombre</span></li>
+      <li><i style="background:#D9302A"></i><b>red-600</b><span>#D9302A · l'accent</span></li>
+      <li><i style="background:#FF8F88"></i><b>red-300</b><span>#FF8F88 · chiffre sur marine</span></li>
+      <li><i style="background:#FFB3AE"></i><b>red-200</b><span>#FFB3AE · surtitre sur marine</span></li>
+      <li><i style="background:#FDFCFA"></i><b>paper</b><span>#FDFCFA · fond de page</span></li>
+      <li><i style="background:#F1F3F7"></i><b>mist</b><span>#F1F3F7 · tuiles, étapes</span></li>
+      <li><i style="background:#D7D9DF"></i><b>line</b><span>#D7D9DF · filets fins</span></li>
+      <li><i style="background:#E9E7E2"></i><b>desk</b><span>#E9E7E2 · table de travail</span></li>
+      <li><i style="background:#FFFFFF"></i><b>white</b><span>#FFFFFF · sur marine, cartouches</span></li>
+    </ul>
+    <p class="small" style="margin-top:14px">Toutes les paires texte/fond nommées atteignent 4,5:1, sauf red-600 sur mist (4,29:1) : sur une tuile, le rouge est réservé aux chiffres et aux formes. Jamais red-600 sur marine : red-300 pour un chiffre, red-200 pour un surtitre.</p>
+  </div>
+
+  <div class="bloc" id="typo">
+    <h2>Typographie · Barlow et Barlow Condensed</h2>
+    <dl>
+      <div class="type"><dt>display<br>Barlow 800 · 58px / 0.95 · −0.02em</dt><dd class="display">Handi-Planeur 2027</dd></div>
+      <div class="type"><dt>h1<br>Barlow 800 · 34px / 1.02 · −0.01em</dt><dd class="h1">Ouvrir le ciel à celles et ceux qui en sont éloignés</dd></div>
+      <div class="type"><dt>h2<br>Barlow 700 · 18px / 1.2</dt><dd style="font-size:18px;font-weight:700">Aide accordée par l'Agence nationale du Sport (ANS)</dd></div>
+      <div class="type"><dt>figure<br>Barlow 800 · 38px / 1 · accent</dt><dd style="font-size:38px;font-weight:800;letter-spacing:-.02em;color:var(--accent)">2 800 €</dd></div>
+      <div class="type"><dt>lead<br>Barlow 400 · 14px / 1.5</dt><dd class="lead" style="color:var(--text-body)">Un premier vol en planeur, c'est un moment que l'on n'oublie pas.</dd></div>
+      <div class="type"><dt>body<br>Barlow 400 · 13px / 1.45</dt><dd style="font-size:13px;color:var(--text-body)">Le Comité coordonne, les clubs accueillent selon leurs moyens.</dd></div>
+      <div class="type"><dt>small<br>Barlow 400 · 11.5px / 1.35 · text-muted</dt><dd class="small">Dont au moins 40 en situation de handicap</dd></div>
+      <div class="type"><dt>eyebrow<br>Barlow Condensed 700 · 12px · 0.14em · capitales</dt><dd class="eyebrow">Pourquoi ce programme</dd></div>
+    </dl>
+    <p class="small" style="margin-top:14px">Échelle de l'imprimé A5. Sur un écran, garder les rapports et agrandir : corps 17–18 px, h1 40–56 px en clamp().</p>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <p>Aperçu du design system CDVP41 : les pages sont rendues en HTML avec les jetons du système, d'après le Programme Handi-Planeur 2027 du Comité départemental de vol en planeur du Loir-et-Cher. Logos fournis par le comité ; logo de l'Agence nationale du Sport reproduit au titre du partenariat. Barlow, SIL Open Font License.</p>
+</footer>
+</body>
+</html>

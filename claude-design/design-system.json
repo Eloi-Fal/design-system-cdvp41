@@ -1,0 +1,394 @@
+{
+ "v": 3,
+ "assetGroups": {
+  "Logos-CDVP41": {
+   "files": {
+    "cdvp41-logo-fond-blanc.png": {
+     "blob": "22a726f77891f36721621af25df93c80",
+     "name": "cdvp41-logo-fond-blanc.png",
+     "size": 1027840,
+     "type": "image/png"
+    },
+    "cdvp41-logo-transparent-contour.png": {
+     "blob": "42866f12c6030e48a893302cb7ea56df",
+     "name": "cdvp41-logo-transparent-contour.png",
+     "size": 850988,
+     "type": "image/png"
+    }
+   },
+   "name": "Logos-CDVP41",
+   "order": [
+    "cdvp41-logo-fond-blanc.png",
+    "cdvp41-logo-transparent-contour.png"
+   ],
+   "tile": "l"
+  },
+  "Logos-H-Handi-Planeur": {
+   "files": {
+    "H-handi-planeur-logo-fond-blanc.png": {
+     "blob": "8448d992fc06b8957c3b84cb87e63ba2",
+     "name": "H-handi-planeur-logo-fond-blanc.png",
+     "size": 765962,
+     "type": "image/png"
+    },
+    "H-handi-planeur-logo-transparent-contour.png": {
+     "blob": "303c1ec47a689b4706e3ea55e22e39d6",
+     "name": "H-handi-planeur-logo-transparent-contour.png",
+     "size": 623762,
+     "type": "image/png"
+    },
+    "H-handi-planeur-logo-transparent.png": {
+     "blob": "092362136e3c1cf6704e62b57e053edd",
+     "name": "H-handi-planeur-logo-transparent.png",
+     "size": 662437,
+     "type": "image/png"
+    }
+   },
+   "name": "Logos-H-Handi-Planeur",
+   "order": [
+    "H-handi-planeur-logo-fond-blanc.png",
+    "H-handi-planeur-logo-transparent.png",
+    "H-handi-planeur-logo-transparent-contour.png"
+   ],
+   "tile": "l"
+  },
+  "Icones": {
+   "name": "Icones",
+   "tile": "xs",
+   "order": [
+    "plane.svg",
+    "plane-takeoff.svg",
+    "plane-landing.svg",
+    "wind.svg",
+    "cloud.svg",
+    "cloud-sun.svg",
+    "sun.svg",
+    "sunrise.svg",
+    "compass.svg",
+    "mountain.svg",
+    "binoculars.svg",
+    "map.svg",
+    "map-pin.svg",
+    "flag.svg",
+    "accessibility.svg",
+    "heart-handshake.svg",
+    "hand-heart.svg",
+    "handshake.svg",
+    "users.svg",
+    "user-round.svg",
+    "heart.svg",
+    "smile.svg",
+    "calendar-days.svg",
+    "calendar-check.svg",
+    "euro.svg",
+    "piggy-bank.svg",
+    "clipboard-list.svg",
+    "file-text.svg",
+    "wrench.svg",
+    "hammer.svg",
+    "shield-check.svg",
+    "trophy.svg",
+    "sparkles.svg",
+    "star.svg",
+    "leaf.svg",
+    "check.svg",
+    "arrow-right.svg",
+    "info.svg",
+    "mail.svg",
+    "phone.svg"
+   ],
+   "files": {
+    "plane.svg": {
+     "name": "plane.svg",
+     "blob": "d313ead70cc20141306d50d6554b6eab",
+     "size": 435,
+     "type": "image/svg+xml"
+    },
+    "plane-takeoff.svg": {
+     "name": "plane-takeoff.svg",
+     "blob": "b784e8d11c98a5625d522b047ef90c18",
+     "size": 521,
+     "type": "image/svg+xml"
+    },
+    "plane-landing.svg": {
+     "name": "plane-landing.svg",
+     "blob": "117aa6202ab49ad2055ffc3390bf9aed",
+     "size": 530,
+     "type": "image/svg+xml"
+    },
+    "wind.svg": {
+     "name": "wind.svg",
+     "blob": "d15189e5c7c9546f695099825fc5496b",
+     "size": 359,
+     "type": "image/svg+xml"
+    },
+    "cloud.svg": {
+     "name": "cloud.svg",
+     "blob": "2626a0d4f3b23e4d04809b4bf06a842a",
+     "size": 289,
+     "type": "image/svg+xml"
+    },
+    "cloud-sun.svg": {
+     "name": "cloud-sun.svg",
+     "blob": "a0bf41afeef6bb7aa1f24658cd562e26",
+     "size": 480,
+     "type": "image/svg+xml"
+    },
+    "sun.svg": {
+     "name": "sun.svg",
+     "blob": "cc047fdd6a47908c31ea90c42933a6ce",
+     "size": 539,
+     "type": "image/svg+xml"
+    },
+    "sunrise.svg": {
+     "name": "sunrise.svg",
+     "blob": "fd8bb2d8b98b44dd82f975452c6e1509",
+     "size": 492,
+     "type": "image/svg+xml"
+    },
+    "compass.svg": {
+     "name": "compass.svg",
+     "blob": "2038b2e4c8431eb66909982e2196a618",
+     "size": 374,
+     "type": "image/svg+xml"
+    },
+    "mountain.svg": {
+     "name": "mountain.svg",
+     "blob": "de12a94e3c0fd5c173479b840bc2a6d8",
+     "size": 265,
+     "type": "image/svg+xml"
+    },
+    "binoculars.svg": {
+     "name": "binoculars.svg",
+     "blob": "9d4375305d7b564a14d02fc8333f4c05",
+     "size": 648,
+     "type": "image/svg+xml"
+    },
+    "map.svg": {
+     "name": "map.svg",
+     "blob": "ddd1b55af1116caca1354979aa90480f",
+     "size": 538,
+     "type": "image/svg+xml"
+    },
+    "map-pin.svg": {
+     "name": "map-pin.svg",
+     "blob": "b3cd2a47dae54ff1d6c7256b65be5a70",
+     "size": 382,
+     "type": "image/svg+xml"
+    },
+    "flag.svg": {
+     "name": "flag.svg",
+     "blob": "241f29eb6e971c94f8b67fadd1dd1e1e",
+     "size": 340,
+     "type": "image/svg+xml"
+    },
+    "accessibility.svg": {
+     "name": "accessibility.svg",
+     "blob": "ae757a0f957c0a9e25fb7cfd508cbf33",
+     "size": 442,
+     "type": "image/svg+xml"
+    },
+    "heart-handshake.svg": {
+     "name": "heart-handshake.svg",
+     "blob": "8709a1815f6666f093972a92065e652c",
+     "size": 568,
+     "type": "image/svg+xml"
+    },
+    "hand-heart.svg": {
+     "name": "hand-heart.svg",
+     "blob": "aac183a0d2ebdb5c43fac70758b1fc06",
+     "size": 553,
+     "type": "image/svg+xml"
+    },
+    "handshake.svg": {
+     "name": "handshake.svg",
+     "blob": "da8ea90f1f3671871613353e3787801f",
+     "size": 543,
+     "type": "image/svg+xml"
+    },
+    "users.svg": {
+     "name": "users.svg",
+     "blob": "ce038f6061a6f8a1c0a0450d8133a2c7",
+     "size": 412,
+     "type": "image/svg+xml"
+    },
+    "user-round.svg": {
+     "name": "user-round.svg",
+     "blob": "be48d278c9a788ced57cf3d1cb4d54ba",
+     "size": 305,
+     "type": "image/svg+xml"
+    },
+    "heart.svg": {
+     "name": "heart.svg",
+     "blob": "62c3340067e2ed07e2cd960538926bd0",
+     "size": 374,
+     "type": "image/svg+xml"
+    },
+    "smile.svg": {
+     "name": "smile.svg",
+     "blob": "28555abf977663fc47c8d79975d7a6b1",
+     "size": 400,
+     "type": "image/svg+xml"
+    },
+    "calendar-days.svg": {
+     "name": "calendar-days.svg",
+     "blob": "43d3b1e10194a1731b8ed793f1070edd",
+     "size": 551,
+     "type": "image/svg+xml"
+    },
+    "calendar-check.svg": {
+     "name": "calendar-check.svg",
+     "blob": "467cdc563ed95f9c3872b1fde4be5d0e",
+     "size": 402,
+     "type": "image/svg+xml"
+    },
+    "euro.svg": {
+     "name": "euro.svg",
+     "blob": "051a24d1c80d17dba5c9ad16e27872fb",
+     "size": 373,
+     "type": "image/svg+xml"
+    },
+    "piggy-bank.svg": {
+     "name": "piggy-bank.svg",
+     "blob": "910f507cf4b0c90e0a9203892b01e33e",
+     "size": 434,
+     "type": "image/svg+xml"
+    },
+    "clipboard-list.svg": {
+     "name": "clipboard-list.svg",
+     "blob": "bbff5d0bddb029da8b9dece5fa57b421",
+     "size": 500,
+     "type": "image/svg+xml"
+    },
+    "file-text.svg": {
+     "name": "file-text.svg",
+     "blob": "034f2c6ae30bec61d489dbc6bc499266",
+     "size": 430,
+     "type": "image/svg+xml"
+    },
+    "wrench.svg": {
+     "name": "wrench.svg",
+     "blob": "206e1b2f7c46173b19c3bdfb61ab847d",
+     "size": 391,
+     "type": "image/svg+xml"
+    },
+    "hammer.svg": {
+     "name": "hammer.svg",
+     "blob": "1f19c15cb73f5a69ce23be38236b8ad8",
+     "size": 484,
+     "type": "image/svg+xml"
+    },
+    "shield-check.svg": {
+     "name": "shield-check.svg",
+     "blob": "3456e2388f5818634211c1b0ca3eb30b",
+     "size": 441,
+     "type": "image/svg+xml"
+    },
+    "trophy.svg": {
+     "name": "trophy.svg",
+     "blob": "25f9911d6908620a5c689a158ab0f476",
+     "size": 554,
+     "type": "image/svg+xml"
+    },
+    "sparkles.svg": {
+     "name": "sparkles.svg",
+     "blob": "010f4a1376ed4491941afa2ddfe05daa",
+     "size": 605,
+     "type": "image/svg+xml"
+    },
+    "star.svg": {
+     "name": "star.svg",
+     "blob": "9fd0b026074a17043cba4e0e70815c24",
+     "size": 601,
+     "type": "image/svg+xml"
+    },
+    "leaf.svg": {
+     "name": "leaf.svg",
+     "blob": "3d366f5c9d3fef6af9a8cb0db818e9ca",
+     "size": 386,
+     "type": "image/svg+xml"
+    },
+    "check.svg": {
+     "name": "check.svg",
+     "blob": "76fd6896161810b9b5fcc42321f9309b",
+     "size": 253,
+     "type": "image/svg+xml"
+    },
+    "arrow-right.svg": {
+     "name": "arrow-right.svg",
+     "blob": "8d3cf0ec21ddd4ae456b5a8f89bcbed0",
+     "size": 286,
+     "type": "image/svg+xml"
+    },
+    "info.svg": {
+     "name": "info.svg",
+     "blob": "8f284ac2a5f44168f9d90fb019054f90",
+     "size": 319,
+     "type": "image/svg+xml"
+    },
+    "mail.svg": {
+     "name": "mail.svg",
+     "blob": "c8f8bb649bce3c0ea47a7b15db8de937",
+     "size": 336,
+     "type": "image/svg+xml"
+    },
+    "phone.svg": {
+     "name": "phone.svg",
+     "blob": "8ee88f8c93a41a7d0bd2348432c1712e",
+     "size": 523,
+     "type": "image/svg+xml"
+    }
+   }
+  },
+  "Partenaires": {
+   "name": "Partenaires",
+   "tile": "m",
+   "order": [
+    "ans-agence-nationale-du-sport.png"
+   ],
+   "files": {
+    "ans-agence-nationale-du-sport.png": {
+     "name": "ans-agence-nationale-du-sport.png",
+     "blob": "d75f1222b38ad2c2521c47f62ad7a336",
+     "size": 119191,
+     "type": "image/png"
+    }
+   }
+  }
+ },
+ "blobs": {},
+ "createdOnFiles": {
+  "at": "2026-09-28T09:17:14Z",
+  "v": 1
+ },
+ "docs": {
+  "readme": "project/README.md",
+  "sections": []
+ },
+ "groups": [
+  "Logos-CDVP41",
+  "Logos-H-Handi-Planeur",
+  "Icones",
+  "Partenaires"
+ ],
+ "lastChange": {
+  "by": "Eloi Falourd",
+  "at": "2026-09-28T09:32:46Z",
+  "via": "Cowork",
+  "note": "Refonte depuis le Programme Handi-Planeur 2027 et la planche d'icônes : jetons, Barlow, 40 icônes, logo ANS, composants du programme"
+ },
+ "layout": "files",
+ "libraries": [
+  {
+   "name": "react",
+   "version": "18"
+  },
+  {
+   "name": "react-dom",
+   "version": "18"
+  }
+ ],
+ "namespace": "CDVP41",
+ "sections": {},
+ "title": "CDVP41"
+}

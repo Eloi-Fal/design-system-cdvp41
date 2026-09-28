@@ -1,0 +1,131 @@
+/* ============================================================================
+   CDVP41 — tokens
+   Copié depuis le design system « CDVP41 » de Claude Design
+   (https://claude.ai/artifact/5j3v4vXFZw1v433V7VMsdY, project/tokens.json,
+   version 2). Les valeurs correspondent une pour une aux jetons du système.
+   Ne pas modifier à la main : resynchroniser depuis la source.
+   ============================================================================ */
+
+/* === fonts =============================================================== */
+/* Barlow et Barlow Condensed (SIL OFL) servies par Google Fonts. Le système
+   embarque aussi les woff2 (fonts/Barlow-*.woff2, sous-ensemble latin) : pour
+   auto-héberger, remplacer l'@import par des @font-face locales. */
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Barlow+Condensed:wght@600;700&display=swap");
+
+:root{
+  --font-sans:'Barlow',Helvetica,Arial,sans-serif;
+  --font-condensed:'Barlow Condensed','Barlow',sans-serif;
+}
+
+/* === colors ============================================================== */
+:root{
+  /* Marine — l'encre et la marque */
+  --navy-900:#1A2440;   /* texte fort (text-strong) sur paper */
+  --navy-700:#1D3A6E;   /* la marque : titres, bandeaux, encarts, filet fort ; blanc dessus 11,2:1 */
+  --navy-600:#2C3752;   /* texte courant */
+  --navy-500:#44506B;   /* texte secondaire : 7,9:1 sur paper, 7,3:1 sur mist */
+  --navy-400:#6A7389;   /* texte discret, pied de page, sur paper uniquement (4,6:1) */
+  --navy-100:#D6DEEE;   /* texte secondaire sur navy-700 (8,3:1) */
+
+  /* Rouge soleil — l'accent. 4,65:1 sur paper, 4,29:1 sur mist (chiffres et formes seulement). Jamais sur marine. */
+  --red-600:#D9302A;
+  --red-300:#FF8F88;    /* chiffre sur fond sombre (5,1:1 sur navy-700) */
+  --red-200:#FFB3AE;    /* surtitre sur fond sombre (6,5:1 sur navy-700) */
+
+  /* Papier et brume — les surfaces */
+  --paper:#FDFCFA;      /* fond de page, blanc cassé chaud */
+  --mist:#F1F3F7;       /* fond des tuiles et des étapes */
+  --line:#D7D9DF;       /* filets fins ; décoratif (1,4:1) */
+  --desk:#E9E7E2;       /* table de travail autour des pages A5 à l'écran */
+  --white:#FFFFFF;      /* texte sur navy-700 et red-600 ; cartouche des logos partenaires */
+
+  /* Alias sémantiques — le code applicatif attrape ceux-ci */
+  --text-strong:var(--navy-900);
+  --text-heading:var(--navy-700);
+  --text-body:var(--navy-600);
+  --text-muted:var(--navy-500);
+  --text-subtle:var(--navy-400);
+  --text-on-dark:var(--white);
+  --text-on-dark-muted:var(--navy-100);
+  --accent:var(--red-600);
+  --accent-on-dark:var(--red-300);
+  --eyebrow-on-dark:var(--red-200);
+  --surface-page:var(--paper);
+  --surface-card:var(--mist);
+  --surface-dark:var(--navy-700);
+  --surface-desk:var(--desk);
+  --border-default:var(--line);
+  --border-strong:var(--navy-700);
+}
+
+/* === spacing ============================================================= */
+:root{
+  --space-1:3px;   /* écart titre–texte dans une étape */
+  --space-2:6px;   /* écart surtitre–titre ; padding du cartouche logo */
+  --space-3:10px;  /* padding vertical des tuiles */
+  --space-4:12px;  /* écart pastille–texte ; padding horizontal des tuiles */
+  --space-5:14px;  /* écart entre étapes ; padding au-dessus d'un filet fort */
+  --space-6:18px;  /* écart vertical entre blocs d'une page */
+  --space-7:26px;  /* marge basse de page */
+  --space-8:34px;  /* marge haute de page */
+  --space-9:38px;  /* marge latérale de page */
+  --space-10:44px; /* marge latérale de couverture */
+  --page-pad-x:38px;
+  --page-pad-top:34px;
+  --page-pad-bottom:26px;
+}
+
+/* === radius, shadow, format ============================================= */
+:root{
+  --radius-sm:6px;     /* tuiles, cartouche blanc des logos */
+  --radius-md:8px;     /* encarts sombres, étapes en encart, encadré, bandeau partenaire */
+  --radius-full:999px; /* pastilles numérotées et pastilles de section */
+  --shadow-sheet:0 1px 2px rgba(26,36,64,.08),0 8px 24px rgba(26,36,64,.08); /* feuille A5 à l'écran, jamais à l'impression */
+  --a5-width:148mm;    /* 559px à l'écran */
+  --a5-height:210mm;   /* 794px à l'écran */
+}
+
+/* === type scale (imprimé A5 ; à l'écran, garder les rapports et agrandir) = */
+:root{
+  --type-display:800 58px/0.95 var(--font-sans);   /* letter-spacing -0.02em */
+  --type-h1:800 34px/1.02 var(--font-sans);        /* letter-spacing -0.01em */
+  --type-h2:700 18px/1.2 var(--font-sans);
+  --type-h3:700 16px/1.2 var(--font-sans);
+  --type-figure-xl:800 44px/1 var(--font-sans);
+  --type-figure:800 38px/1 var(--font-sans);       /* letter-spacing -0.02em */
+  --type-lead:400 14px/1.5 var(--font-sans);
+  --type-body:400 13px/1.45 var(--font-sans);
+  --type-small:400 11.5px/1.35 var(--font-sans);
+  --type-footer:400 10.5px/1.35 var(--font-sans);
+  --type-eyebrow:700 12px/1.2 var(--font-condensed); /* letter-spacing .14em ; uppercase */
+}
+
+/* === base ================================================================ */
+body{
+  margin:0;
+  background:var(--surface-page);
+  color:var(--text-body);
+  font:var(--type-body);
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{color:var(--text-heading);margin:0}
+.display{font:var(--type-display);letter-spacing:-.02em}
+.h1{font:var(--type-h1);letter-spacing:-.01em}
+.h2{font:var(--type-h2)}
+.h3{font:var(--type-h3)}
+.figure{font:var(--type-figure);letter-spacing:-.02em;color:var(--accent)}
+.figure-xl{font:var(--type-figure-xl);color:var(--accent-on-dark)}
+.lead{font:var(--type-lead)}
+.body{font:var(--type-body)}
+.small{font:var(--type-small);color:var(--text-muted)}
+.footer{font:var(--type-footer);color:var(--text-subtle)}
+.eyebrow{font:var(--type-eyebrow);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+
+:focus-visible{outline:3px solid var(--red-600);outline-offset:2px}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+@media print{
+  body{background:#fff}
+}
